@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 30px auto;
+}
+.container {
+    width: 600px;
+    height: 300px;
+    position: relative;
+    margin: 100px auto 30px;
+    border-bottom: 3px solid #f44336;
+}
+.container img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.container .slidNum {
+    position: absolute;
+    z-index: 10;
+}
+.container .slidNum,
+.control #prev, 
+.control #next {
+    background: #f44336;
+    color: #fff;
+    width: 115px;
+    text-align: center;
+    margin: 15px;
+    padding: 7px 0;
+    display: inline-block;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.control {
+    width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#indicators {
+    display: inline-block;
+    width: 350px;
+
+}
+#indicators ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+#indicators ul li{
+    list-style: none;
+    background-color: #eee;
+    padding: 3px 7px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* classes javascript */
+.container img.active {
+    opacity: 1;
+}
+.control #prev.disabled, 
+.control #next.disabled {
+    background: #f44336b0;
+    cursor: no-drop;
+}
+#indicators ul li.active{
+    background-color: #f44336;
+    color: #fff;
+}
